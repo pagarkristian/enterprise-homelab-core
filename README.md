@@ -49,7 +49,6 @@ This infrastructure is dynamically updated across version milestones to isolate 
        ▼
 -[Push Secure Config] ──> v1.0.0 (Vulnerable) ──> v1.1.0 (Hardened Stable) ──> v2.0.0 (Pipeline)
 
-
 ```
 
 ---
