@@ -80,7 +80,8 @@ The foundational release mimicking high-risk infrastructure flaws commonly found
 
 ## 📂 Resource Links:
 
-🔗 Review v1.0.0 Vulnerable Source Blueprints
+🔗 Review v1.0.0 Vulnerable Source Blueprints 
+(https://github.com/pagarkristian/enterprise-homelab-core/blob/f50a1f46368bf9c936e2b60a831329745d5acbfa/v1.0.0-vulnerable.md)
 
 📄 Read the Initial Architectural Writeup
 
