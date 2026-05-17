@@ -64,6 +64,7 @@ Engineered following deep network penetration testing to close major systemic en
 ## 📂 Resource Links:
 
 🔗 Review v1.1.0 Secure Configuration Blueprints
+(https://github.com/pagarkristian/enterprise-homelab-core/blob/cb4e20603b781f203cd9956a4dfe2a67370a36e1/v1.1.0-hardened.md)
 
 ## 📄 Read the Post-Hardening Verification Report
 
