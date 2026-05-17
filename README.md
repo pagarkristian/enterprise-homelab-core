@@ -12,7 +12,7 @@
 ## 🌟 1. Executive Overview
 
 > [!IMPORTANT]
-> **Enterprise Homelab Core** is a living architectural blueprint modeling a Small-to-Medium Business (SMB) enterprise network. This project demonstrates a full-lifecycle infrastructure evolution: originating from a fundamentally insecure baseline (**v1.0.0-vulnerable**), subjected to rigorous penetration testing, and iteratively mitigated via radical configuration pengerasan (**v1.1.0-hardened**).
+> **Enterprise Homelab Core** is a living architectural blueprint modeling a Small-to-Medium Business (SMB) enterprise network. This project demonstrates a full-lifecycle infrastructure evolution: originating from a fundamentally insecure baseline (**v1.0.0-vulnerable**), subjected to rigorous penetration testing, and iteratively mitigated via radical configuration hardening (**v1.1.0-hardened**).
 
 ### 🎯 Core Infrastructure Pillars:
 * 🔹 **Infrastructure as Code (IaC) Mindset:** All device configurations, firewall matrices, and system rules are version-controlled and documented as code.
@@ -32,63 +32,74 @@ The table below details the logical multi-segment network layout and asset distr
 | 🐉 **Security Auditor (Kali Linux)**| `eth1` (Internal LAN) | `10.216.27.10/24` | `10.216.27.1` | Offensive testing endpoint utilized for continuous scanning, vulnerability assessment, and auditing. |
 
 ---
+
+## 📂 3. Repository Structure
+
+Below is the flat directory layout reflecting the actual file distribution at the repository root level:
+
+```text
+enterprise-homelab-core/
+├── README.md                  # Main architecture documentation front-face (Current File)
+├── Retesting -v1.1.0.md       # Post-hardening validation & security re-verification evidence
+├── v1.0.0-vulnerable.md       # Legacy baseline architectural flaws & configurations
+└── v1.1.0-hardened.md         # Remediation scripts and secured enterprise system rules
+```
+
 ---
 
-## 🔄 Security Life Cycle 
+## 🔄 4. Security Lifecycle & Structural Versioning
 
-This project uses an integrated security wheel to ensure data stability and security:
+This infrastructure is dynamically updated across version milestones to isolate remediation efforts:
 
 ```diff
  ┌────────────────────────────────────────────────────────┐
  │                                                        │
  ▼                                                        │
 +[Build/Upgrade Lab] ──> [Audit & Scan] ──> [Hardening] ──┘
- (Blueprints Base)       (Docs/Report)     (Code Remediation)
+ (Blueprints Base)       (Docs/Report)      (Code Remediation)
        │
        ▼
--[Push Secure Config] ──> v1.0.0 ──> v1.1.0 ──> v2.0.0 (Next Integration)
+-[Push Secure Config] ──> v1.0.0 (Vulnerable) ──> v1.1.0 (Hardened Stable) ──> v2.0.0 (Pipeline)
+
 
 ```
+
 ---
-##  Milestone Specifications (Click to Expand Detail)
-🛡️ Posture Status: SECURED & VERIFIED
+
+## 📈 5. Milestone Specifications (Click to Expand Detail)
+
+<details>
+<summary><b>🟢 v1.1.0 [CURRENT STABLE] - Hardened Production Release</b></summary>
+<br>
+
+### 🛡️ Posture Status: *SECURED & VERIFIED*
 Engineered following deep network penetration testing to close major systemic entry points. Focus centers on traffic encryption and access containment.
 
-🛠️ Hardening Vector Remediations:
-[Transport Cryptography] Enforced Apache SSL/TLS modules (a2enmod ssl). Forced cleartext traffic migration from HTTP Port 80 directly onto encrypted HTTPS Port 443.
+#### 🛠️ Hardening Vector Remediations:
+* **[Transport Cryptography]** Enforced Apache SSL/TLS modules (`a2enmod ssl`). Forced cleartext traffic migration from HTTP Port 80 directly onto encrypted HTTPS Port 443.
+* **[Access Control Restriction]** Deprecated unauthenticated access vectors within `vsftpd.conf` to completely disable Anonymous Logins.
+* **[Boundary Firewall Update]** Synchronized tight MikroTik RouterOS IP Firewall Filter Rules to drop unauthorized cross-segment packets targeting internal assets.
 
-[Access Control Restriction] Deprecated unauthenticated access vectors within vsftpd.conf to completely disable Anonymous Logins.
+#### 📂 Resource Links:
+* 🔗 [Review v1.1.0 Secure Configuration Blueprints](v1.1.0-hardened.md)
+* 📄 [Read the Post-Hardening Verification Report (Retesting)](Retesting%20-v1.1.0.md)
 
-[Boundary Firewall Update] Synchronized tight MikroTik RouterOS IP Firewall Filter Rules to drop unauthorized cross-segment packets targeting internal assets.
+</details>
 
-## 📂 Resource Links:
+<details>
+<summary><b>🔴 v1.0.0 [LEGACY BASELINE] - Vulnerable Production Deployment</b></summary>
+<br>
 
-🔗 Review v1.1.0 Secure Configuration Blueprints
-(https://github.com/pagarkristian/enterprise-homelab-core/blob/cb4e20603b781f203cd9956a4dfe2a67370a36e1/v1.1.0-hardened.md)
-
-## 📄 Read the Post-Hardening Verification Report
-
-## ⚠️ Posture Status: VULNERABLE BY DESIGN
+### ⚠️ Posture Status: *VULNERABLE BY DESIGN*
 The foundational release mimicking high-risk infrastructure flaws commonly found in enterprise environments due to systemic administrative misconfigurations.
 
----
-## ❌ Open Vulnerability Vectors:
-[Insecure Communication Protocols] Applications served over cleartext HTTP, exposing business transaction data to active sniffing payloads.
+#### ❌ Open Vulnerability Vectors:
+* **[Insecure Communication Protocols]** Applications served over cleartext HTTP, exposing business transaction data to active sniffing payloads.
+* **[Flawed Authentication Design]** Permissive FTP configuration allows unauthenticated threat actors to extract critical backend directory assets.
+* **[Arbitrary Code Upload Endpoint]** The web directory lacks extension or content-type sanitization (`chmod 777`), enabling successful WebShell injections to achieve full RCE.
 
-[Flawed Authentication Design] Permissive FTP configuration allows unauthenticated threat actors to extract critical backend directory assets.
+#### 📂 Resource Links:
+* 🔗 [Review v1.0.0 Vulnerable Source Blueprints](v1.0.0-vulnerable.md)
+  
+</details>
 
-[Arbitrary Code Upload Endpoint] The web directory lacks extension or content-type sanitization (chmod 777), enabling successful WebShell injections to achieve full RCE.
-
-## 📂 Resource Links:
-
-🔗 Review v1.0.0 Vulnerable Source Blueprints 
-(https://github.com/pagarkristian/enterprise-homelab-core/blob/f50a1f46368bf9c936e2b60a831329745d5acbfa/v1.0.0-vulnerable.md)
-
-📄 Read the Initial Architectural Writeup
-
-## 🤖 5. Defensive Integration (Cross-Project Linkage)
-To examine the active penetration testing lifecycle, automated exploitation scripts, and offensive toolkits used to audit this infrastructure, refer to the twin security node:
-
-[!TIP]
-
-🎯 Offensive Arsenal: Review active payload development and automated exploit verification scripts at the Red Team Arsenal Repository.
