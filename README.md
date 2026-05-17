@@ -58,8 +58,10 @@ This infrastructure is dynamically updated across version milestones to isolate 
 This repository is an inseparable offensive counterpart to the main defensive project. To examine how the network architecture was built and how attacks from this arsenal were ultimately **blocked completely**, please visit the following links:
 
 > [!TIP]
-> * 🏛️ **Legacy Network Architecture (v1.0.0):** Review the unhardened router configurations and initial vulnerable server blueprints at the [Enterprise Homelab Core Repository (v1.0.0-vulnerable)](https://github.com/pagarkristian/enterprise-homelab-core/blob/f50a1f46368bf9c936e2b60a831329745d5acbfa/v1.0.0-vulnerable.md).
-> * 📄 **Official Retesting Report:** Read the comprehensive analysis of the failed attack (*Re-Exploit*) post-hardening in the [v1.1.0 Security Retesting Document](https://github.com/pagarkristian/enterprise-homelab-core/blob/4cb973737ffdf5014b13e16056fa0a8258ee8caa/Retesting%20-v1.1.0.md).
+> * 🏛️ **Legacy Network Architecture (v1.0.0):** Review the unhardened router configurations and initial vulnerable server blueprints at the [Enterprise Homelab Core Repository (v1.0.0-vulnerable)]
+> * (https://github.com/pagarkristian/enterprise-homelab-core/blob/f50a1f46368bf9c936e2b60a831329745d5acbfa/v1.0.0-vulnerable.md).
+> * 📄 **Official Retesting Report:** Read the comprehensive analysis of the failed attack (*Re-Exploit*) post-hardening in the [v1.1.0 Security Retesting Document]
+> * (https://github.com/pagarkristian/enterprise-homelab-core/blob/4cb973737ffdf5014b13e16056fa0a8258ee8caa/Retesting%20-v1.1.0.md).
 ---
 
 <div align="center">
