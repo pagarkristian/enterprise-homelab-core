@@ -33,21 +33,9 @@ The table below details the logical multi-segment network layout and asset distr
 
 ---
 
-## 📂 3. Repository Structure
 
-Below is the flat directory layout reflecting the actual file distribution at the repository root level:
 
-```text
-enterprise-homelab-core/
-├── README.md                  # Main architecture documentation front-face (Current File)
-├── Retesting -v1.1.0.md       # Post-hardening validation & security re-verification evidence
-├── v1.0.0-vulnerable.md       # Legacy baseline architectural flaws & configurations
-└── v1.1.0-hardened.md         # Remediation scripts and secured enterprise system rules
-```
-
----
-
-## 🔄 4. Security Lifecycle & Structural Versioning
+## 🔄 3. Security Lifecycle & Structural Versioning
 
 This infrastructure is dynamically updated across version milestones to isolate remediation efforts:
 
@@ -66,7 +54,7 @@ This infrastructure is dynamically updated across version milestones to isolate 
 
 ---
 
-## 📈 5. Milestone Specifications (Click to Expand Detail)
+## 📈 4. Milestone Specifications (Click to Expand Detail)
 
 <details>
 <summary><b>🟢 v1.1.0 [CURRENT STABLE] - Hardened Production Release</b></summary>
