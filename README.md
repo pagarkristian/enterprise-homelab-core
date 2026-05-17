@@ -69,9 +69,10 @@ Engineered following deep network penetration testing to close major systemic en
 * **[Boundary Firewall Update]** Synchronized tight MikroTik RouterOS IP Firewall Filter Rules to drop unauthorized cross-segment packets targeting internal assets.
 
 #### 📂 Resource Links:
-* 🔗 [Review v1.1.0 Secure Configuration Blueprints](v1.1.0-hardened.md)
-* 📄 [Read the Post-Hardening Verification Report (Retesting)](Retesting%20-v1.1.0.md)
-
+> [!TIP]
+> *  🔗 [Review v1.1.0 Secure Configuration Blueprints](v1.1.0-hardened.md)
+> *  [Read the Post-Hardening Verification Report (Retesting)](Retesting%20-v1.1.0.md)
+ 
 </details>
 
 <details>
@@ -85,9 +86,11 @@ The foundational release mimicking high-risk infrastructure flaws commonly found
 * **[Insecure Communication Protocols]** Applications served over cleartext HTTP, exposing business transaction data to active sniffing payloads.
 * **[Flawed Authentication Design]** Permissive FTP configuration allows unauthenticated threat actors to extract critical backend directory assets.
 * **[Arbitrary Code Upload Endpoint]** The web directory lacks extension or content-type sanitization (`chmod 777`), enabling successful WebShell injections to achieve full RCE.
-
-#### 📂 Resource Links:
-* 🔗 [Review v1.0.0 Vulnerable Source Blueprints](v1.0.0-vulnerable.md)
   
 </details>
 
+---
+
+<div align="center">
+  <sub>Maintained by <b>pagarkristian</b> for Cyber Security & Red Team Portfolio Standardization.</sub>
+</div>
