@@ -28,7 +28,7 @@ The table below details the logical multi-segment network layout and asset distr
 | System Component | Host Interface | Assigned IP Address | Default Gateway | Functional Role & Network Scope |
 | :--- | :--- | :--- | :--- | :--- |
 | 🛡️ **Core Router (MikroTik)** | `ether1` (WAN)<br>`ether2` (LAN) | DHCP (ISP Assigned)<br>`10.216.27.1/24` | Automated<br>N/A | Core routing, NAT management, boundary isolation, and central Firewall Filter rule enforcement. |
-| 🐧 **Web & FTP Server (Ubuntu)** | `enp0s8` (Internal LAN) | `10.216.27.100/24` | `10.216.27.1` | Hosts the internal `TechSecure` production portal and acts as the centralized FTP storage node. |
+| 🐧 **Target (Ubuntu)** | `enp0s8` (Internal LAN) | `10.216.27.100/24` | `10.216.27.1` | Hosts the internal `TechSecure` production portal and acts as the centralized FTP storage node. |
 | 🐉 **Security Auditor (Kali Linux)**| `eth1` (Internal LAN) | `10.216.27.10/24` | `10.216.27.1` | Offensive testing endpoint utilized for continuous scanning, vulnerability assessment, and auditing. |
 
 ---
