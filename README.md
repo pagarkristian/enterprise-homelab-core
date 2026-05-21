@@ -67,8 +67,9 @@ This repository is an inseparable offensive counterpart to the main defensive pr
 
  (https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.1.0-Retesting.md).
 
----
 
+
+---
 <div align="center">
-  <sub>Maintained by <b>BlueTeam Defensive Unit</b> for Continuous Monitoring & Network Security Baseline v1.0.0.</sub>
+  <sub>Maintained by <b>SecOps Infrastructure Team</b> for Enterprise Security Hardening & Defense Standardization.</sub>
 </div>
