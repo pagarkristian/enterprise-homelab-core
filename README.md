@@ -70,5 +70,5 @@ This repository is an inseparable offensive counterpart to the main defensive pr
 ---
 
 <div align="center">
-  <sub>Maintained by <b>pagarkristian</b> for Cyber Security & Red Team Portfolio Standardization.</sub>
+  <sub>Maintained by <b>BlueTeam Defensive Unit</b> for Continuous Monitoring & Network Security Baseline v1.0.0.</sub>
 </div>
