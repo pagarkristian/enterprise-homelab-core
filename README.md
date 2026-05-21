@@ -71,5 +71,5 @@ This repository is an inseparable offensive counterpart to the main defensive pr
 
 ---
 <div align="center">
-  <sub>Maintained by <b>SecOps Infrastructure Team</b> for Enterprise Security Hardening & Defense Standardization.</sub>
+  <sub>Maintained by <b>Pagar Kristian</b> for Enterprise Security Hardening & Defense Standardization.</sub>
 </div>
