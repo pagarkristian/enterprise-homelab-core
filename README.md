@@ -59,7 +59,6 @@ This repository is an inseparable offensive counterpart to the main defensive pr
 
 > [!TIP]
 > * 🏛️ **Legacy Network Architecture (v1.0.0):** Review the unhardened router configurations and initial vulnerable server blueprints at the [Enterprise Homelab Core Repository (v1.0.0-vulnerable)]
-
 (https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.0.0-vulnerable.md).
 
 > * 📄 **Official Retesting Report:** Read the comprehensive analysis of the failed attack (*Re-Exploit*) post-hardening in the [v1.1.0 Security Retesting Document]
