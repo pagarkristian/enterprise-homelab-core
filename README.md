@@ -65,7 +65,7 @@ This repository is an inseparable offensive counterpart to the main defensive pr
 > [!TIP]
 > * 📄 **Official Retesting Report:** Read the comprehensive analysis of the failed attack (*Re-Exploit*) post-hardening in the [v1.1.0 Security Retesting Document]
 
- (https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.1.0-Retesting.md).
+(https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.1.0-Retesting.md).
 
 
 
