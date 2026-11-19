@@ -14,7 +14,7 @@ The server passed its audit in v1.1.0. Then the business asked for two new featu
 |---|----------|--------|
 | 1 | [Business Context](./v2.1.0-business-context.md) | Done |
 | 2 | [Vulnerable Features](./v2.1.1-vulnerable-features.md) | Done |
-| 3 | Monitoring Setup (Wazuh) | In progress |
+| 3 | Monitoring Setup (Wazuh) | Done |
 | 4 | Attack Simulation (in [redteam-homelab-toolkit](https://github.com/pagarkristian/redteam-homelab-toolkit)) | Planned |
 | 5 | Detection Engineering | Planned |
 | 6 | Retesting | Planned |
