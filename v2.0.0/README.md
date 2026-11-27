@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://img.shields.io/badge/Project-Enterprise_Homelab_Core-1F4068?style=for-the-badge&logo=proxmox&logoColor=white" />
 <img src="https://img.shields.io/badge/Version-2.0.0-0052CC?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-In_Progress-D29922?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Nearly_Done-1F883D?style=for-the-badge" />
 </div>
 
 # v2.0.0: SOC Integration
@@ -17,8 +17,8 @@ The server passed its audit in v1.1.0. Then the business asked for two new featu
 | 3 | [Monitoring Setup (Wazuh)](./v2.2.0-monitoring-setup.md) | Done |
 | 4 | [Attack Simulation](https://github.com/pagarkristian/redteam-homelab-toolkit/blob/main/v2.0.0/v2.2.1-attack-simulation.md) (in redteam-homelab-toolkit) | Done |
 | 5 | [Detection Engineering](./v2.3.0-detection-engineering.md) | Done |
-| 6 | [Retesting](./v2.3.1-retesting.md) | In progress |
-| 7 | [Incident Report](./v2.4.0-incident-report.md) | In progress |
+| 6 | [Retesting](./v2.3.1-retesting.md) | Done — all three rules confirmed firing on a cold retest, zero false positives on normal use |
+| 7 | [Incident Report](./v2.4.0-incident-report.md) | Draft done — factual sections complete; Executive Summary and Lessons Learned need rewriting in your own words before use |
 
 ## Current lab state
 
