@@ -1,75 +1,42 @@
-# 🏛️ Enterprise Homelab Core: Architectural Evolution & Hardening
-
 <div align="center">
-  <img src="https://img.shields.io/badge/Infrastructure_Type-Enterprise_SMB_Core-1F4068?style=for-the-badge&logo=proxmox&logoColor=white" alt="Type" />
+  <img src="https://img.shields.io/badge/Infrastructure_Type-SMB_Homelab-1F4068?style=for-the-badge&logo=proxmox&logoColor=white" alt="Type" />
   <img src="https://img.shields.io/badge/Core_Router-MikroTik_RouterOS-0052CC?style=for-the-badge&logo=mikrotik&logoColor=white" alt="Router" />
-  <img src="https://img.shields.io/badge/Production_OS-Ubuntu_Server_24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="OS" />
-  <img src="https://img.shields.io/badge/Security_Framework-DevSecOps_/_SDLC-D32F2F?style=for-the-badge&logo=target&logoColor=white" alt="Framework" />
+  <img src="https://img.shields.io/badge/Target_OS-Ubuntu_Server_24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="OS" />
+  <img src="https://img.shields.io/badge/Status-Done-1F883D?style=for-the-badge" />
 </div>
 
----
+# v1.0.0 → v1.1.0: Build, Break, Harden, Re-test
 
-## 🌟 1. Executive Overview
-
-> [!IMPORTANT]
-> **Enterprise Homelab Core** is a living architectural blueprint modeling a Small-to-Medium Business (SMB) enterprise network. This project demonstrates a full-lifecycle infrastructure evolution: originating from a fundamentally insecure baseline (**v1.0.0-vulnerable**), subjected to rigorous penetration testing, and iteratively mitigated via radical configuration hardening (**v1.1.0-hardened**).
-
-### 🎯 Core Infrastructure Pillars:
-* 🔹 **Infrastructure as Code (IaC) Mindset:** All device configurations, firewall matrices, and system rules are version-controlled and documented as code.
-* 🔹 **Secured SDLC Execution:** Implements continuous security evaluation cycles to track down architectural regression from initial deployment to stable releases.
-* 🔹 **Defense-in-Depth Emulation:** Combines industry-standard routing platforms (MikroTik RouterOS) and enterprise server environments (Ubuntu Server) within a controlled virtual boundary.
+<div align="center"><sub>The first cycle of the project: a deliberately weak server is built, attacked, then hardened — and attacked again to confirm the fixes actually hold.</sub></div>
 
 ---
 
-## 🛠️ 2. Core Network Architecture & Topology Matrix
+## 🌟 1. Overview
 
-The table below details the logical multi-segment network layout and asset distribution within the enterprise lab:
+This is the starting point of the homelab. The goal was to build a small network with real, common misconfigurations — not contrived ones — attack it properly, and then fix each weakness one at a time, confirming with a re-attack that the fix actually closed the gap rather than just looking closed.
 
-| System Component | Host Interface | Assigned IP Address | Default Gateway | Functional Role & Network Scope |
+## 🛠️ 2. Network Topology
+
+| System Component | Host Interface | Assigned IP | Default Gateway | Role |
 | :--- | :--- | :--- | :--- | :--- |
-| 🛡️ **Core Router (MikroTik)** | `ether1` (WAN)<br>`ether2` (LAN) | DHCP (ISP Assigned)<br>`10.216.27.1/24` | Automated<br>N/A | Core routing, NAT management, boundary isolation, and central Firewall Filter rule enforcement. |
-| 🐧 **Target (Ubuntu)** | `enp0s8` (Internal LAN) | `10.216.27.100/24` | `10.216.27.1` | Hosts the internal `TechSecure` production portal and acts as the centralized FTP storage node. |
-| 🐉 **Security Auditor (Kali Linux)**| `eth1` (Internal LAN) | `10.216.27.10/24` | `10.216.27.1` | Offensive testing endpoint utilized for continuous scanning, vulnerability assessment, and auditing. |
+| 🛡️ Core Router (MikroTik) | `ether1` (WAN), `ether2` (LAN) | DHCP (WAN), `10.216.27.1/24` (LAN) | — | NAT, perimeter firewall rules |
+| 🐧 Target (Ubuntu) | `enp0s8` (internal LAN) | `10.216.27.100/24` | `10.216.27.1` | Hosts the `TechSecure` portal and FTP storage |
+| 🐉 Auditor (Kali Linux) | `eth1` (internal LAN) | `10.216.27.10/24` | `10.216.27.1` | Runs the scans and attacks |
 
----
-
-
-
-## 🔄 3. Security Lifecycle & Structural Versioning
-
-This infrastructure is dynamically updated across version milestones to isolate remediation efforts:
+## 🔄 3. What happens in this cycle
 
 ```diff
- ┌────────────────────────────────────────────────────────┐
- │                                                        │
- ▼                                                        │
-+[Build/Upgrade Lab] ──> [Audit & Scan] ──> [Hardening] ──┘
- (Blueprints Base)       (Docs/Report)      (Code Remediation)
-       │
-       ▼
--[Push Secure Config] ──> v1.0.0 (Vulnerable) ──> v1.1.0 (Hardened Stable) ──> v2.0.0 (Pipeline)
-
++[Build Vulnerable Baseline] ──> [Attack It] ──> [Harden It] ──> [Re-attack: Confirmed Blocked]
+   (v1.0.0-vulnerable.md)      (redteam repo)  (v1.1.0-hardened.md)  (v1.1.0-Retesting.md)
 ```
 
----
-
-## 🔗 3. Cross-Project Linkage
-
-This repository is an inseparable offensive counterpart to the main defensive project. To examine how the network architecture was built and how attacks from this arsenal were ultimately **blocked completely**, please visit the following links:
-
-> [!TIP]
-> * 🏛️ **Legacy Network Architecture (v1.0.0):** Review the unhardened router configurations and initial vulnerable server blueprints at the [Enterprise Homelab Core Repository (v1.0.0-vulnerable)]
-
- (https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.0.0-vulnerable.md).
-
-> [!TIP]
-> * 📄 **Official Retesting Report:** Read the comprehensive analysis of the failed attack (*Re-Exploit*) post-hardening in the [v1.1.0 Security Retesting Document]
-
-(https://github.com/pagarkristian/enterprise-homelab-core/blob/main/v1.1.0-Retesting.md).
-
-
+- **[v1.0.0-vulnerable.md](./v1.0.0-vulnerable.md)** — the network build-out and the vulnerable server configuration, with every flaw deliberately left in: anonymous FTP, an open Samba share, a SQL-injectable login, and an unrestricted file upload.
+- The full attack against this baseline (SQL injection, web shell upload, SSH brute-forcing, flag capture) is documented in the counterpart repository — see [redteam-homelab-toolkit, v1.0.0](https://github.com/pagarkristian/redteam-homelab-toolkit/tree/main/v1.0.0).
+- **[v1.1.0-hardened.md](./v1.1.0-hardened.md)** — the fixes applied for each weakness found: firewall rules, SSH key-only auth, prepared statements, upload whitelisting, Fail2Ban, and MikroTik perimeter rules.
+- **[v1.1.0-Retesting.md](./v1.1.0-Retesting.md)** — confirms, from the defender's side, that every attack from the baseline now fails.
 
 ---
+
 <div align="center">
-  <sub>Maintained by <b>pagarkristian</b> for Enterprise Security Hardening & Defense Standardization.</sub>
+  <sub>Enterprise Homelab Core v1.0.0 · Maintained by <b>pagarkristian</b></sub>
 </div>
