@@ -6,7 +6,7 @@
 
 <h1 align="center">Enterprise Homelab Core</h1>
 <p align="center"><sub>A small-business-style network, built on purpose, broken on purpose, then watched.</sub></p>
-
+ 
 ---
 
 ## 🌟 What this is
